@@ -1,7 +1,8 @@
+# Name: Breno Maurício de Freitas Viana
 # NUSP: 11920060
 # Course Code: SCC5830
-# 2021/1
-# Assignment 1 : image generation
+# Year/Semester: 2021/1
+# Assignment 1: Image Generator
 
 
 import math
