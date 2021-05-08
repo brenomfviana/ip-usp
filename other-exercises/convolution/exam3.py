@@ -1,7 +1,8 @@
 import numpy as np
 
-f = np.matrix([[25,50,1,4],[255,52,2,5],[255,100,0,3],[255,100,3,120]])
 
+# Q3
+f = np.matrix([[25,50,1,4],[255,52,2,5],[255,100,0,3],[255,100,3,120]])
 w1 = np.matrix([[1,1,1],[1,-8,1],[1,1,1]])
 w2 = np.matrix([[0,1/10,0],[1/10,6/10,1/10],[0,1/10,0]])
 
@@ -17,9 +18,10 @@ def conv_point(f, w, x, y):
 print('w1 of g(1, 1) =', conv_point(f, w1, 1, 1))
 print('w1 of g(2, 2) =', conv_point(f, w1, 2, 2))
 print('w2 of g(1, 2) =', conv_point(f, w2, 1, 2))
-
-
 print()
+
+
+# Q4
 wm = np.matrix([[1,1,1],[1,1,1],[1,1,1]])
 
 def conv_point_median(f, w, x, y):
