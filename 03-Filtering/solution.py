@@ -101,7 +101,7 @@ def f2():
   """
   # Get center of the filter
   c = int((size - 1) / 2)
-  # Pad the original image with reflection
+  # Pad the original image with edge
   Ip = np.pad(I, (c, c), 'edge')
   # Initialize the resulting image
   Ir = np.zeros(Ip.shape)
@@ -120,7 +120,7 @@ def f3():
   """
   a = int((size - 1) / 2)
   b = int((size - 1) / 2)
-  # Pad the original image with reflection
+  # Pad the original image with constant
   Ip = np.pad(I, (size, size), 'constant', constant_values=(0, 0))
   # Initialize the resulting image
   Ir = np.zeros(Ip.shape)
