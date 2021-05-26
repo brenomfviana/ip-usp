@@ -156,7 +156,7 @@ Ir = Ir.astype(np.uint8)
 # ----- (3) Comparing `Ir` against reference image `I`
 
 # --- Calculate the root mean squared error
-def rsme(I, Ir):
+def rmse(I, Ir):
   N, M = I.shape
   rmse = 0.0
   for x in range(N):
@@ -165,5 +165,5 @@ def rsme(I, Ir):
   rmse = math.sqrt(rmse / (N * M))
   return round(rmse, 4)
 
-# --- Print the computed result of RSME
-print(rsme(I, Ir))
+# --- Print the computed result of RMSE
+print(rmse(I, Ir))

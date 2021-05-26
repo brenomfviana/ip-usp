@@ -116,11 +116,14 @@ for i in [0, 1, 2, 3]:
 # ----- (4) Comparing `Hsr` against reference image `H`
 
 # --- Calculate the root mean squared error
-rmse = 0.0
-for x in range(N):
-  for y in range(N):
-    rmse += math.pow(float(H[x, y]) - float(Hsr[x, y]), 2)
-rmse = math.sqrt(rmse / (N * M))
+def rmse(I, Ir):
+  N, M = I.shape
+  rmse = 0.0
+  for x in range(N):
+    for y in range(M):
+      rmse += math.pow(float(I[x, y]) - float(Ir[x, y]), 2)
+  rmse = math.sqrt(rmse / (N * M))
+  return round(rmse, 4)
 
-# --- Print the computed result of RSE
-print(round(rmse, 4))
+# --- Print the computed result of RMSE
+print(rmse(I, Ir))
