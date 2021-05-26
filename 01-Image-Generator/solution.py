@@ -139,5 +139,5 @@ for x in range(N):
 rse = math.sqrt(rse)
 
 
-# --- Pring computed result of RSE
+# --- Print the computed result of RSE
 print(round(rse, 4))

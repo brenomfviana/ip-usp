@@ -146,7 +146,7 @@ def apply_filter():
 # Apply filter
 Ir = apply_filter()
 
-# Normalize resulting image and convert the values to uint8
+# Normalize resultinrectg image and convert the values to uint8
 Ir = (Ir - Ir.min()) / (Ir.max() - Ir.min())
 Ir *= 255
 Ir = Ir.astype(np.uint8)
@@ -165,5 +165,5 @@ def rsme(I, Ir):
   rmse = math.sqrt(rmse / (N * M))
   return round(rmse, 4)
 
-# --- Pring computed result of RSME
+# --- Print the computed result of RSME
 print(rsme(I, Ir))

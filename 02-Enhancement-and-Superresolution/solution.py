@@ -122,5 +122,5 @@ for x in range(N):
     rmse += math.pow(float(H[x, y]) - float(Hsr[x, y]), 2)
 rmse = math.sqrt(rmse / (N * M))
 
-# --- Pring computed result of RSE
+# --- Print the computed result of RSE
 print(round(rmse, 4))
